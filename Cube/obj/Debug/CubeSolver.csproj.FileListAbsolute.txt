@@ -1,0 +1,10 @@
+C:\src\Cube\Cube\bin\Debug\Cube.exe.config
+C:\src\Cube\Cube\bin\Debug\Cube.exe
+C:\src\Cube\Cube\bin\Debug\Cube.pdb
+C:\src\Cube\Cube\obj\Debug\CubeSolver.csproj.GenerateResource.Cache
+C:\src\Cube\Cube\obj\Debug\Cube.exe
+C:\src\Cube\Cube\obj\Debug\Cube.pdb
+C:\src\Cube\Cube\obj\Debug\CubeSolver.Properties.Resources.resources
+C:\src\Cube\Cube\obj\Debug\CubeSolver.FrmCubeSolver.resources
+C:\src\Cube\Cube\obj\Debug\CubeSolver.FrmQuickPicks.resources
+C:\src\Cube\Cube\obj\Debug\CubeSolver.csprojResolveAssemblyReference.cache

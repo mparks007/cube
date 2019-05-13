@@ -1,0 +1,6 @@
+C:\src\Cube\ArrayRotateTest\bin\Debug\ArrayRotateTest.exe.config
+C:\src\Cube\ArrayRotateTest\bin\Debug\ArrayRotateTest.exe
+C:\src\Cube\ArrayRotateTest\bin\Debug\ArrayRotateTest.pdb
+C:\src\Cube\ArrayRotateTest\obj\Debug\ArrayRotateTest.exe
+C:\src\Cube\ArrayRotateTest\obj\Debug\ArrayRotateTest.pdb
+C:\src\Cube\ArrayRotateTest\obj\Debug\ArrayRotateTest.csprojResolveAssemblyReference.cache

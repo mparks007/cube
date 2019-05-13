@@ -1,0 +1,9 @@
+C:\src\Cube\Cube\bin\Debug\Cube.exe.config
+C:\src\Cube\Cube\bin\Debug\Cube.exe
+C:\src\Cube\Cube\bin\Debug\Cube.pdb
+C:\src\Cube\Cube\obj\Debug\Cube.csprojResolveAssemblyReference.cache
+C:\src\Cube\Cube\obj\Debug\Cube.Properties.Resources.resources
+C:\src\Cube\Cube\obj\Debug\Cube.csproj.GenerateResource.Cache
+C:\src\Cube\Cube\obj\Debug\Cube.exe
+C:\src\Cube\Cube\obj\Debug\Cube.pdb
+C:\src\Cube\Cube\obj\Debug\Cube.Form1.resources

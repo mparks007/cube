@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA0937D5-A62D-4F1D-A56E-D10B2A6BA331}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CubeSolver</RootNamespace>
+    <AssemblyName>Cube</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Cube.cs" />
+    <Compile Include="Enums\Direction.cs" />
+    <Compile Include="Enums\DrawType.cs" />
+    <Compile Include="Loggers\CompositeLogger.cs" />
+    <Compile Include="Loggers\FileSystemLogger.cs" />
+    <Compile Include="Loggers\ILogger.cs" />
+    <Compile Include="Loggers\TextBoxLogger.cs" />
+    <Compile Include="Renderers\IRenderer.cs" />
+    <Compile Include="Renderers\RenderBase.cs" />
+    <Compile Include="Renderers\RenderAsBitmapBase.cs" />
+    <Compile Include="Renderers\RenderAsBitmapSelectedPiece.cs" />
+    <Compile Include="Renderers\RenderAsBitmapSplitStack.cs" />
+    <Compile Include="Renderers\RenderAsBitmapThreeD.cs" />
+    <Compile Include="Renderers\RenderAsBitmapUglyGrid.cs" />
+    <Compile Include="Renderers\RenderAsBitmapUnFold.cs" />
+    <Compile Include="Solvers\ISolver.cs" />
+    <Compile Include="Solvers\SolverLarge.cs" />
+    <Compile Include="Solvers\SolverLargeEven.cs" />
+    <Compile Include="Solvers\SolverLargeOdd.cs" />
+    <Compile Include="Solvers\SolverQuickPicks.cs" />
+    <Compile Include="Utils\ExtensionMethods.cs" />
+    <Compile Include="Enums\Face.cs" />
+    <Compile Include="Forms\FrmCubeSolver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCubeSolver.Designer.cs">
+      <DependentUpon>FrmCubeSolver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmQuickPicks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuickPicks.Designer.cs">
+      <DependentUpon>FrmQuickPicks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Enums\Plane.cs" />
+    <Compile Include="Core\Piece.cs" />
+    <Compile Include="CubeSolver.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solvers\Solver2x2x2.cs" />
+    <Compile Include="Solvers\Solver3x3x3.cs" />
+    <Compile Include="Solvers\SolverBase.cs" />
+    <EmbeddedResource Include="Forms\FrmCubeSolver.resx">
+      <DependentUpon>FrmCubeSolver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuickPicks.resx">
+      <DependentUpon>FrmQuickPicks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TODO.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

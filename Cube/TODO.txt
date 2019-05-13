@@ -1,0 +1,6 @@
+﻿
+- Make highlight logic not render the entire cube, just find the piece in matrix and render the hightlight on the existing bitmap
+- search for TODO
+- Auto-Solve
+- Allow coloring of your own cube to setup as one in hand?
+- Additional algorithm buttons for bigger cubes
